@@ -28,4 +28,6 @@ Route::group([ 'middleware' => [
     Route::get('/pages', function() {
         return view('admin.pages');
     })->name('pages');
+
+    Route::view('/users', 'admin.livewire', ['com' => 'users'])->name('users');
 });
